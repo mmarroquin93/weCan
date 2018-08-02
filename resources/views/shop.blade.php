@@ -189,21 +189,7 @@
 			</nav>
 		</header><!-- Header /- -->
 	
-		<!-- Page Banner -->
-		<div class="container-fluid no-padding page-banner">
-			<!-- Container -->
-			<div class="container">
-				<!-- Banner Heading -->
-				<div class="banner-heading">
-					<h3>Shop - Product List</h3>
-					<ol class="breadcrumb">
-						<li><a href="index.blade.php">Home</a></li>
-						<li><a href="#">shop</a></li>
-						<li class="active">Product List</li>
-					</ol>
-				</div><!-- Banner Heading /- -->
-			</div><!-- Container /- -->
-		</div><!-- Page Banner /- -->
+
 		
 		<!-- Product List -->
 		<div id="product-list" class="product-list container-fluid no-padding">

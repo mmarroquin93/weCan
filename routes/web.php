@@ -14,3 +14,4 @@
 Route::get('/', function () {
     return view('index');
 });
+Route::get('/tienda','Tienda@listar');
