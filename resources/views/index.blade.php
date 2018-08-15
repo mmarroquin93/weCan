@@ -11,9 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Mauricio Marroquin">
 
-	<title>care</title>
+	<title>weCan | Juntos podemos</title>
 
 	<!-- Standard Favicon -->
 	<link rel="icon" type="image/x-icon" href="images\favicon.ico">
@@ -89,15 +89,15 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-8 col-sm-8 col-xs-6">
-							<p>Leave A Message: <a href="mailto:info@petcare.com">info@petcare.com</a></p>
+							<p>Envianos tus consultas a: <a href="mailto:ventas@wecan.com.pe">ventas@wecan.com.pe</a></p>
 						</div>
 						<div class="social col-md-4 col-sm-4 col-xs-6 pull-right">
 							<ul class="no-bottom-margin">
-								<li><a href="#"><img src="images\icon\tw-ic.png" alt="Twitter"></a></li>
+
 								<li><a href="#"><img src="images\icon\fb-ic.png" alt="Facebook"></a></li>	
-								<li><a href="#"><img src="images\icon\g -ic.png" alt="Google pulse"></a></li>
-								<li><a href="#"><img src="images\icon\dribbble-ic.png" alt="dribbler"></a></li>
-								<li><a href="#"><img src="images\icon\in-ic.png" alt="In"></a></li>
+
+								<li><a href="#"><img src="images\icon\fb-ic.png" alt="Instagram"></a></li>
+
 							</ul>					
 						</div>
 					</div>
@@ -116,20 +116,17 @@
 							</a>
 						</div>
 						<div class="col-md-9 pull-right">
-							<div class="location">
-								<img src="images\icon\location-ic.png" alt="Location">
-								<p><span>Our Location</span> 50- Design Street, Texas</p>
-							</div>
+
 							<div class="time-scheduled">
 								<img src="images\icon\time-ic.png" alt="time">
-								<p><span>Mon - Sat</span> 8 am - 10 pm</p>
+								<p><span>Lun - Sab</span> 10 am - 6 pm</p>
 							</div>
 							<div class="phone">
 								<img src="images\icon\phone-ic.png" alt="phone">
-								<p><span>Call Us</span> +1 (0) 234 56 789</p>
+								<p><span>Pedidos :</span>  (01) 990 994 142</p>
 							</div>
 							<div class="cart">
-								<a href="#"><img src="images\icon\cart-ic.png" alt="png"><span>10</span></a>
+								<a href="#"><img src="images\icon\cart-ic.png" alt="png"><span> 0</span></a>
 							</div>
 						</div>
 					</div>
@@ -153,37 +150,17 @@
 						</div>
 						<div id="navbar" class="navbar-collapse collapse">
 							<ul class="nav navbar-nav">
-								<li class="active"><a href="index.blade.php">Home</a></li>
-								<li><a href="about.blade.php">About Us</a></li>
-								<li><a href="services.blade.php">Services</a></li>
-								<li class="dropdown">
-									<a href="shop.blade.php" title="product list" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Shop</a>
-									<i class="ddl-switch fa fa-angle-down"></i>
-									<ul class="dropdown-menu">
-										<li><a href="shop-pets.blade.php">Pets List</a></li>
-										<li><a href="shop-details.blade.php">Product Details</a></li>
-										<li><a href="checkout.blade.php">Place Order</a></li>
-										<li><a href="shop-cart.blade.php">My Cart</a></li>
-									</ul>
-								</li>
-								<li class="dropdown">
-									<a href="#" title="Pages" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
-									<i class="ddl-switch fa fa-angle-down"></i>
-									<ul class="dropdown-menu">
-										<li><a href="error.blade.php">Error</a></li>
-									</ul>
-								</li>
-								<li class="dropdown">
-									<a href="blog.blade.php" title="Blog" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
-									<i class="ddl-switch fa fa-angle-down"></i>
-									<ul class="dropdown-menu">
-										<li><a href="single-blog.blade.php">Single Blog</a></li>
-									</ul>
-								</li>
-								<li><a href="contact-us.blade.php">Contact US</a></li>
+								<li class="active"><a href={{ url('/ ') }}>Inicio</a></li>
+								<li><a href={{ url('/nosotros') }}>Nosotros</a></li>
+								<li><a href={{ url('/galeria') }}>Galeria</a></li>
+
+                                <li><a href={{ url('/gracias-a-ti') }}>Gracias a ti</a></li>
+                                <li><a href={{ url('/blog') }}>Blog</a></li>
+
+								<li><a href={{ url('/contactanos') }}>Contáctanos</a></li>
 							</ul>						
 						</div>
-						<a href="#">Get An Appointment</a>
+						<a href="{{ url('/tienda') }}">Compra weCan!</a>
 					</div>
 				</div>
 			</nav>
@@ -246,17 +223,17 @@
 			<div class="container">
 				<!-- Section Header -->
 				<div class="section-header">
-					<h3>What We Do</h3>
-					<p>They will have to make the best of things its an uphill climb</p>
+					<h2>Cómo funciona</h2>
+
 				</div><!-- Section Header /- -->
 				<div class="row">
 					<div class="col-md-4 col-sm-6">
 						<div class="pet-images bgcolor-default">
 							<img src="images\intro\intro-1.jpg" alt="intro-1">
 							<div class="content-box">
-								<h3>Pet wellness <span>We Take Care On Your Pet</span><i><img src="images\icon\intro-icon-1.png" alt="Intro Icon"></i></h3>
-								<p> To a deluxe apartment in the sky. And we'll do it our way yes our way make all our dreams come true for me and you No phone no lights no motor</p>
-								<a href="#" title="Read More">Read More <i class="fa fa-angle-double-right"></i></a>
+								<h3>Preparamos <span>con los mejores insumos</span><i><img src="images\icon\dog-food.png" alt="Comida weCan"></i></h3>
+								<p> Elaboramos una alimentación natural y balanceada con los niveles adecuados de proteínas y grasas para fortalecer los huesos y estimular las defensas de tu engreído.</p>
+								<a href="#" title="Enterate de más">Enterate de más <i class="fa fa-angle-double-right"></i></a>
 							</div>
 						</div>
 					</div>
@@ -264,9 +241,9 @@
 						<div class="pet-images bgcolor-green">
 							<img src="images\intro\intro-2.jpg" alt="intro-2">
 							<div class="content-box">
-								<h3>Pet wellness <span>We Take Care On Your Pet</span><i><img src="images\icon\intro-icon-2.png" alt="Intro Icon"></i></h3>
-								<p> To a deluxe apartment in the sky. And we'll do it our way yes our way make all our dreams come true for me and you No phone no lights no motor</p>
-								<a href="#" title="Read More">Read More <i class="fa fa-angle-double-right"></i></a>
+								<h3>Vendemos <span>a travez de nuestros canales digitales</span><i><img src="images\icon\online-shop.png" alt="Carrito de compra weCan"></i></h3>
+								<p>Al momento de comprar las croquetas weCan generas donativos en especie para muchos perros de albergues. Es decir, compras croquetas y donas más croquetas.</p>
+								<a href="#" title="Enterate de más">Enterate de más <i class="fa fa-angle-double-right"></i></a>
 							</div>
 						</div>
 					</div>
@@ -274,9 +251,9 @@
 						<div class="pet-images bgcolor-yellow">
 							<img src="images\intro\intro-3.jpg" alt="intro-3">
 							<div class="content-box">
-								<h3>Pet wellness <span>We Take Care On Your Pet</span><i><img src="images\icon\intro-icon-3.png" alt="Intro Icon"></i></h3>
-								<p> To a deluxe apartment in the sky. And we'll do it our way yes our way make all our dreams come true for me and you No phone no lights no motor</p>
-								<a href="#" title="Read More">Read More <i class="fa fa-angle-double-right"></i></a>
+								<h3>Donamos <span>con las ventas ayudamos a perros sin hogar</span><i><img src="images\icon\dog-pawprint-on-a-heart.png" alt="Intro Icon"></i></h3>
+								<p> Al final de cada mes, todas las donaciones se enviaran a la fundación Kaprichos Perrunos para ayudar en la alimentación de un perro sin hogar.</p>
+								<a href="#" title="Enterate de más">Enterate de más <i class="fa fa-angle-double-right"></i></a>
 							</div>
 						</div>
 					</div>
@@ -284,73 +261,25 @@
 			</div><!-- Container /- -->
 			<div class="section-padding"></div>
 		</div><!-- Intro /- -->
-		
-		<!-- Appointment -->
-		<div id="appointment" class="appointment container-fluid no-padding">
-			<div class="section-padding"></div>
-			<!-- Container -->
-			<div class="container">
-				<div class="row">
-					<form class="appointment-form">
-						<!-- Section Header -->
-						<div class="section-header">
-							<h3>Get An Appointment</h3>
-							<p>They will have to make the best of things its an uphill climb</p>
-						</div><!-- Section Header /- -->
-						<div class="col-md-3 col-sm-3">
-							<input type="text" class="form-control" placeholder="First Name" required="">
-						</div>
-						<div class="col-md-3 col-sm-3">
-							<input type="text" class="form-control" placeholder="Last Name" required="">
-						</div>
-						<div class="col-md-3 col-sm-3">
-							<input type="text" class="form-control" placeholder="Email" required="">
-						</div>
-						<div class="col-md-3 col-sm-3">
-							<input type="text" class="form-control" placeholder="Phone Number" required="">
-						</div>
-						<div class="form-group col-md-3 col-sm-3">
-							<select>
-								<option>Pet Category</option>
-								<option>Pet Category</option>
-								<option>Pet Category</option>
-								<option>Pet Category</option>
-							</select>
-						</div>
-						<div class="form-group col-md-3 col-sm-3">
-							<select>
-								<option>Service Type</option>
-								<option>Service Type</option>
-								<option>Service Type</option>
-								<option>Service Type</option>
-							</select>
-						</div>
-						<div class="form-group col-md-3 col-sm-3">
-							<select>
-								<option>Service Type</option>
-								<option>Service Type</option>
-								<option>Service Type</option>
-								<option>Service Type</option>
-							</select>
-						</div>
-						<div class="form-group col-md-3 col-sm-3">
-							<select>
-								<option>Service Type</option>
-								<option>Service Type</option>
-								<option>Service Type</option>
-								<option>Service Type</option>
-							</select>
-						</div>
-						<div class="col-md-12 col-sm-12 col-xs-12">
-							<textarea class="form-control" rows="7" cols="20" placeholder="Anything we should know about your pet?" required=""></textarea>
-						</div>
-						<button class="btn btn-default">Get An Appoinment</button>
-					</form>
-				</div>
-			</div><!-- Container /- -->
-			<div class="section-padding"></div>
-		</div><!-- Appointment /- -->
-		
+
+
+        <!-- Callout -->
+        <div class="callout container-fluid no-padding">
+            <!-- Container -->
+            <div class="container">
+                <div class="callout-content row">
+                    <div class="col-md-10 col-sm-9">
+                        <h3>Visita nuestra tienda online</h3>
+                        <h4>Encontraras lo mejor para tu engreido</h4>
+                    </div>
+                    <div class="col-md-2 col-sm-3">
+                        <a href="/tienda" class="btn btn-default" title="Compra weCan">Ir a tienda</a>
+                    </div>
+                </div>
+            </div><!-- Container /- -->
+        </div><!-- Callout /- -->
+
+
 		<!-- Services -->
 		<div id="services" class="services container-fluid no-padding">
 			<div class="section-padding"></div>
@@ -358,50 +287,67 @@
 			<div class="container">
 				<!-- Section Header -->
 				<div class="section-header">
-					<h3>Services we Offer</h3>
-					<p>In a freak mishap ranger and its pilot captain william buck rogers are blown</p>
+					<h3>Se parte de nuestra manada </h3>
+					<p>Las buenas acciones tienen recompensa</p>
 				</div><!-- Section Header /- -->
 				<div class="service-tab col-md-9 no-padding">
 					<div class="col-md-4 col-sm-5 no-padding">
 						<ul class="nav nav-tabs" role="tablist">
 							<li class="active" role="presentation">
-								<a data-toggle="tab" role="tab" aria-controls="tab-one" href="#tab-one" aria-expanded="true"><i><img src="images\icon\care.png" alt="care"></i>Veterinary care</a>
+								<a data-toggle="tab" role="tab" aria-controls="tab-one" href="#tab-one" aria-expanded="true"><i><img src="images\icon\care.png" alt="care"></i>Individuo</a>
 							</li>
 							<li class="" role="presentation">
-								<a data-toggle="tab" role="tab" aria-controls="tab-two" href="#tab-two" aria-expanded="false"><i><img src="images\icon\camp.png" alt="care"></i>Pets Day Camp</a>
+								<a data-toggle="tab" role="tab" aria-controls="tab-two" href="#tab-two" aria-expanded="false"><i><img src="images\icon\camp.png" alt="care"></i>Organizaciones</a>
 							</li>
 							<li class="" role="presentation">
-								<a data-toggle="tab" role="tab" aria-controls="tab-three" href="#tab-three" aria-expanded="false"><i><img src="images\icon\nutrition.png" alt="nutrition"></i>Pet Nutrition</a>
+								<a data-toggle="tab" role="tab" aria-controls="tab-three" href="#tab-three" aria-expanded="false"><i><img src="images\icon\nutrition.png" alt="nutrition"></i>Universidades</a>
 							</li>
 							<li class="" role="presentation">
-								<a data-toggle="tab" role="tab" aria-controls="tab-four" href="#tab-four" aria-expanded="false"><i><img src="images\icon\insurance.png" alt="insurance"></i>Pet Insurance</a>
+								<a data-toggle="tab" role="tab" aria-controls="tab-four" href="#tab-four" aria-expanded="false"><i><img src="images\icon\insurance.png" alt="insurance"></i>Municipalidades</a>
 							</li>
 						</ul>
 					</div>
 					<div class="tab-content col-md-8 col-sm-7 no-padding">
 						<div id="tab-one" class="tab-pane active" role="tabpanel">
 							<div class="tab-box">
-								<p>1 Trajectory into an orbit which freezes his life support systems and returns Buck Rogers to Earth five-hundred years later. We're gonna do it. On your mark get set and go now. Got a dream and we just know now we're gonna make our dream come true. Space. The final frontier. These are the voyages of the Starship Enterprise.</p>
-								<p>Now were up in the big leagues getting' our turn at bat? No phone no lights no motor car not a single luxury. Like Robinson Crusoe it's primitive as can be! Boy the way Glen Miller played. Songs that made the hit parade guys like us.</p>
-							</div>
+                                <ol>
+                                    <li style=" font-size: 13.5px; color: #777; line-height: 24px;"> Comparte nuestro propósito en redes usando nuestra información y logo. Baja el logo aquí.</li>
+                                    <li style=" font-size: 13.5px; color: #777; line-height: 24px;"> Motiva a tus amigos a generar el cambio con weCan.</li>
+                                    <li style=" font-size: 13.5px; color: #777; line-height: 24px;"> Convierte tus compras en solidarias con weCan.</li>
+                                    <li style=" font-size: 13.5px; color: #777; line-height: 24px;"> Se parte de nuestros voluntariados donando parte de tu tiempo en ayudar a los que más lo necesitan. Descargar el formulario de inscripción.</li>
+                                    <li style=" font-size: 13.5px; color: #777; line-height: 24px;"> Infórmate acerca de la tenencia responsable de animales. Descarga la información aquí.</li>
+                                </ol>
+                            </div>
 						</div>
 						<div id="tab-two" class="tab-pane" role="tabpanel">
 							<div class="tab-box">
-								<p>2 Trajectory into an orbit which freezes his life support systems and returns Buck Rogers to Earth five-hundred years later. We're gonna do it. On your mark get set and go now. Got a dream and we just know now we're gonna make our dream come true. Space. The final frontier. These are the voyages of the Starship Enterprise.</p>
-								<p>Now were up in the big leagues getting' our turn at bat? No phone no lights no motor car not a single luxury. Like Robinson Crusoe it's primitive as can be! Boy the way Glen Miller played. Songs that made the hit parade guys like us.</p>
-							</div>
+                                <ol>
+                                    <li style=" font-size: 13.5px; color: #777; line-height: 24px;"> Comparte nuestro propósito en redes usando nuestra información y logo. Baja el logo aquí. </li>
+                                    <li style=" font-size: 13.5px; color: #777; line-height: 24px;"> Únete a weCan como aliado estratégico. Descarga el formulario de inscripción.</li>
+                                    <li style=" font-size: 13.5px; color: #777; line-height: 24px;"> Usa nuestra información y logo para todas las publicaciones que creas conveniente. Descárgalos aquí.</li>
+
+                                </ol>
+                                </ol>
+                            </div>
 						</div>
 						<div id="tab-three" class="tab-pane" role="tabpanel">
 							<div class="tab-box">
-								<p>3 Trajectory into an orbit which freezes his life support systems and returns Buck Rogers to Earth five-hundred years later. We're gonna do it. On your mark get set and go now. Got a dream and we just know now we're gonna make our dream come true. Space. The final frontier. These are the voyages of the Starship Enterprise.</p>
-								<p>Now were up in the big leagues getting' our turn at bat? No phone no lights no motor car not a single luxury. Like Robinson Crusoe it's primitive as can be! Boy the way Glen Miller played. Songs that made the hit parade guys like us.</p>
-							</div>	
+                                <ol>
+                                    <li style=" font-size: 13.5px; color: #777; line-height: 24px;"> Comparte nuestro propósito en redes usando nuestra información y logo. Baja el logo aquí. </li>
+                                    <li style=" font-size: 13.5px; color: #777; line-height: 24px;"> Incentiva el movimiento weCan a través de activaciones.</li>
+                                    <li style=" font-size: 13.5px; color: #777; line-height: 24px;">  Informa a los alumnos a través de charlas de tenencia responsable. Ponte en contacto aquí.</li>
+                                </ol>
+                            </div>
 						</div>
 						<div id="tab-four" class="tab-pane" role="tabpanel">
 							<div class="tab-box">
-								<p>4 Trajectory into an orbit which freezes his life support systems and returns Buck Rogers to Earth five-hundred years later. We're gonna do it. On your mark get set and go now. Got a dream and we just know now we're gonna make our dream come true. Space. The final frontier. These are the voyages of the Starship Enterprise.</p>
-								<p>Now were up in the big leagues getting' our turn at bat? No phone no lights no motor car not a single luxury. Like Robinson Crusoe it's primitive as can be! Boy the way Glen Miller played. Songs that made the hit parade guys like us.</p>
-							</div>	
+                                <ol>
+                                    <li style=" font-size: 13.5px; color: #777; line-height: 24px;"> Comparte nuestro propósito en redes usando nuestra información y logo. Baja el logo aquí.</li>
+                                    <li style=" font-size: 13.5px; color: #777; line-height: 24px;"> Únete al movimiento weCan colaborando con nuestro propósito. Ponte en contacto aquí. </li>
+                                    <li style=" font-size: 13.5px; color: #777; line-height: 24px;"> Incentiva en las personas a generar el cambio con weCan.</li>
+                                    <li style=" font-size: 13.5px; color: #777; line-height: 24px;"> Usa nuestra información y logo para todo lo que creas conveniente. Descárgalos aquí.</li>
+                                </ol>
+                            </div>
 						</div>
 					</div>
 				</div>
@@ -410,21 +356,7 @@
 			<div class="section-padding"></div>
 		</div><!-- Services /- -->
 		
-		<!-- Callout -->
-		<div class="callout container-fluid no-padding">
-			<!-- Container -->
-			<div class="container">
-				<div class="callout-content row">
-					<div class="col-md-10 col-sm-9">
-						<h3>Have a visit to Our Store for a Movement</h3>
-						<h4>You Will Really Gets Satisfied with Our Largest Collections</h4>
-					</div>
-					<div class="col-md-2 col-sm-3">
-						<a href="#" class="btn btn-default" title="Purchase">Go To Store</a>
-					</div>
-				</div>
-			</div><!-- Container /- -->
-		</div><!-- Callout /- -->
+
 		
 		<!-- Why Choose Us -->
 		<div class="why-choose-us container-fluid no-padding">
@@ -433,8 +365,8 @@
 			<div class="container">
 				<!-- Section Header -->
 				<div class="section-header">
-					<h3>Why Choose Us</h3>
-					<p>They will have to make the best of things its an uphill climb</p>
+					<h3>Porque elegir weCan</h3>
+					<p>Lo mas importante es su alimentación y weCan lo sabe</p>
 				</div><!-- Section Header /- -->
 				<div class="row">
 					<div class="col-md-3 col-sm-6">
@@ -444,10 +376,10 @@
 							</div>
 							<div class="why-choose-hover">
 								<i><img src="images\icon\medal.png" alt="medal"></i>
-								<h3>Best In The Industry</h3>
-								<p>Rogers are blown out of their into an orbit which freezes his life which freezes his life</p>							
+								<h3>Ingredientes Naturales</h3>
+								<p> Seleccionamos los mejores ingredientes naturales y fáciles de digerir para una asimilación óptima de los nutrientes.</p>
 							</div>
-							<a href="#">Read more</a>
+							<a href="#">Leer más</a>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">
@@ -457,10 +389,10 @@
 							</div>
 							<div class="why-choose-hover">
 								<i><img src="images\icon\customer-support.png" alt="Customer Support"></i>
-								<h3>Customer Support</h3>
-								<p>Come and listen to a story about Jed a poor mountaineer barely kept his family fed buck rogers to</p>							
+								<h3>Pelo Brillante y Piel Sana</h3>
+								<p>Protección extra gracias a la combinación de selenio orgánico, biotina, vitamina B2 para mantener un pelo brillante y sano.</p>
 							</div>
-							<a href="#">Read more</a>
+							<a href="#">Leer más</a>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">
@@ -470,10 +402,10 @@
 							</div>
 							<div class="why-choose-hover">
 								<i><img src="images\icon\home.png" alt="home"></i>
-								<h3>Special Care On Pets</h3>
-								<p>The mate was a mighty sailin' man the two skipper brave and sure. Five </p>							
+								<h3>Auténtica Carne Fresca</h3>
+								<p>Preparado con carne fresca de consumo humano.</p>
 							</div>
-							<a href="#">Read more</a>
+							<a href="#">Leer más</a>
 						</div>
 					</div>
 					<div class="col-md-3 col-sm-6">
@@ -483,10 +415,10 @@
 							</div>
 							<div class="why-choose-hover">
 								<i><img src="images\icon\dogfeek.png" alt="dogfeek"></i>
-								<h3>Best Quality Products</h3>
-								<p>Mister we could use a man like Herbert Hoover again. They're creepy and they're kooky mysterious and spooky. They're all togethe</p>							
+								<h3>Protección</h3>
+								<p>Contiene minerales orgánicos y vitaminas A Y C para reforzar el sistema inmune.</p>
 							</div>
-							<a href="#">Read more</a>
+							<a href="#">Leer más</a>
 						</div>
 					</div>
 				</div>
@@ -494,181 +426,29 @@
 			<div class="section-padding"></div>
 		</div><!-- Why Choose Us /- -->
 		
-		<!-- Testimonial -->
-		<div class="testimonial container-fluid no-padding">
-			<div class="section-padding"></div>
-			<!-- Container -->
-			<div class="container">
-				<div class="row">
-					<div class="col-md-7 col-sm-12">
-						<div class="section-header">
-							<h3>Our Client Says</h3>
-						</div>
-						<div id="main-carousel" class="carousel slide carousel-fade col-offset-2" data-ride="carousel">
-							<div class="carousel-inner" role="listbox">
-								<div class="item active item-content">
-									<p>Since we're together Fish don't fry in the kitchen and beans don't burn on the grill. Took a whole lotta tryin' just to get up that hill. Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law so lets make it.</p>
-									<img src="images\icon\quotes.png" alt="quotes">
-									<h2>Roslin Miriyam<span>Premium Client</span></h2>
-								</div>
-								<div class="item item-content">
-									<p>Since we're together Fish don't fry in the kitchen and beans don't burn on the grill. Took a whole lotta tryin' just to get up that hill. Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law so lets make it.</p>
-									<img src="images\icon\quotes.png" alt="quotes">
-									<h2>Roslin Miriyam<span>Premium Client</span></h2>
-								</div>
-							</div>
-							<a class="left carousel-control" href="#main-carousel" role="button" data-slide="prev">
-								<i class="fa fa-angle-left"></i>
-								<span class="sr-only">Previous</span>
-							</a>
-							<a class="right carousel-control" href="#main-carousel" role="button" data-slide="next">
-								<i class="fa fa-angle-right"></i>
-								<span class="sr-only">Next</span>
-							</a>
-						</div><!-- Main Carousel /-  -->
-					</div>
-					<div class="col-md-5 col-sm-12">
-						<div class="avatar-member">
-							<div class="col-md-6 col-sm-3">
-								<div class="avatar-images">
-									<img src="images\testimonial\avatar-1.jpg" alt="avatar-1">
-								</div>
-							</div>
-							<div class="col-md-6 col-sm-3">
-								<div class="avatar-images">
-									<img src="images\testimonial\avatar-2.jpg" alt="avatar-2">
-								</div>
-							</div>
-							<div class="col-md-6 col-sm-3">
-								<div class="avatar-images">
-									<img src="images\testimonial\avatar-3.jpg" alt="avatar-3">
-								</div>
-							</div>
-							<div class="col-md-6 col-sm-3">
-								<div class="avatar-images">
-									<img src="images\testimonial\avatar-4.jpg" alt="avatar-4">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div><!-- Container /- -->
-			<div class="section-padding"></div>
-		</div><!-- Testimonial /- -->
-		
-		<!-- Team -->
-		<div class="team container-fluid no-padding">
-			<div class="section-padding"></div>
-			<!-- Container -->
-			<div class="container">
-				<div class="section-header">
-					<h3>Our Team On Service</h3>
-					<p>They will have to make the best of things its an uphill climb</p>
-				</div>
-				<div class="row">
-					<div class="team-thumb">
-						<div class="col-md-12">
-							<div class="team-member">
-								<div class="team-image-box">
-									<img src="images\team\team-member-1.jpg" alt="Team Member">
-									<div class="team-content"><h3>Dr. John Francis<span>Veterinary Chief</span></h3></div>
-								</div>
-								<div class="team-social-icon">
-									<ul class="list-inline">
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li>	
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>						
-										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-										<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-12">
-							<div class="team-member">
-								<div class="team-image-box">
-									<img src="images\team\team-member-2.jpg" alt="Team Member">
-									<div class="team-content"><h3>Dr. John Francis<span>Veterinary Chief</span></h3></div>
-								</div>
-								<div class="team-social-icon">
-									<ul class="list-inline">
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li>	
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>						
-										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-										<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-12">
-							<div class="team-member">
-								<div class="team-image-box">
-									<img src="images\team\team-member-3.jpg" alt="Team Member">
-									<div class="team-content"><h3>Dr. John Francis<span>Veterinary Chief</span></h3></div>
-								</div>
-								<div class="team-social-icon">
-									<ul class="list-inline">
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li>	
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>						
-										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-										<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-12">
-							<div class="team-member">
-								<div class="team-image-box">
-									<img src="images\team\team-member-4.jpg" alt="Team Member">
-									<div class="team-content"><h3>Dr. John Francis<span>Veterinary Chief</span></h3></div>
-								</div>
-								<div class="team-social-icon">
-									<ul class="list-inline">
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li>	
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>						
-										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-										<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div><!-- Container /- -->
-			<div class="section-padding"></div>
-		</div><!-- Team /- -->
-		
+
+
 		<!-- Counter -->
 		<div class="counter container-fluid no-padding">
 			<!-- Container -->
 			<div class="container">
 				<div class="row">
-					<div class="col-md-3 col-sm-6 col-xs-12">
+
+					<div class="col-md-3  col-md-offset-2 col-sm-6 col-xs-12 ">
 						<div class="counter-box">
-							<h3><img src="images\counter\counter-1.png" alt="counter-1"><span class="count" id="statistics_count-1" data-statistics_percent="3540"> &nbsp;</span></h3>
-							<p>srvice we done</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12">
-						<div class="counter-box">
-							<h3><img src="images\counter\counter-2.png" alt="counter-2">
+							<h3><img src="images\counter\user.png" alt="counter-2">
 							<span class="count" id="statistics_count-2" data-statistics_percent="1234">&nbsp;</span></h3>
-							<p>Our Happy Clients</p>
+							<p>Manada weCan</p>
 						</div>
 					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12">
-						<div class="counter-box">
-							<h3><img src="images\counter\counter-3.png" alt="counter-3">
-							<span class="count" id="statistics_count-3" data-statistics_percent="2200">&nbsp;</span></h3>
-							<p>Talented Employees</p>
-						</div>
+					<div class="col-md-3  col-md-offset-1 col-sm-6 col-xs-12">
+                        <div class="counter-box">
+                            <h3><img src="images\counter\paw.png" alt="counter-1">
+                                <span class="count" id="statistics_count-1" data-statistics_percent="1234">&nbsp;</span></h3>
+                            <p>Kg Donados</p>
+                        </div>
 					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12">
-						<div class="counter-box">
-							<h3><img src="images\counter\counter-4.png" alt="counter-4">
-							<span class="count" id="statistics_count-4" data-statistics_percent="1234">&nbsp;</span></h3>
-							<p>Branches We Have</p>
-						</div>
-					</div>
+
 				</div>
 			</div><!-- Container /- -->
 		</div><!-- Counter /- -->

@@ -1738,7 +1738,7 @@
 .categories-type li::before {
 	position: absolute;
 	content: "";
-	background: url("../images/widget/bullet.png");	
+	background: url("../../../images/widget/bullet.png");
 	background-repeat: no-repeat;
 	left: 0;
 	display: inline-block;

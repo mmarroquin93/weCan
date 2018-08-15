@@ -13,22 +13,22 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-	<title>care</title>
+	<title>weCan | Blog </title>
 
 	<!-- Standard Favicon -->
-	<link rel="icon" type="image/x-icon" href="images\favicon.ico">
+	<link rel="icon" type="image/x-icon" href="..\..\images\favicon.ico">
 	
 	<!-- For iPhone 4 Retina display: -->
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images\apple-touch-icon-114x114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="..\..\images\apple-touch-icon-114x114-precomposed.png">
 	
 	<!-- For iPad: -->
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images\apple-touch-icon-72x72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="..\..\images\apple-touch-icon-72x72-precomposed.png">
 	
 	<!-- For iPhone: -->
-	<link rel="apple-touch-icon-precomposed" href="images\apple-touch-icon-57x57-precomposed.png">	
+	<link rel="apple-touch-icon-precomposed" href="..\..\images\apple-touch-icon-57x57-precomposed.png">
 	
 	<!-- Library - Loader CSS -->
-	<link rel="stylesheet" type="text/css" href="libraries\loader\loaders.min.css">
+	<link rel="stylesheet" type="text/css" href="..\..\libraries\loader\loaders.min.css">
 
 	<!-- Library - Google Font Familys -->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
@@ -37,31 +37,31 @@
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
 	<!-- Library - Bootstrap v3.3.5 -->
-    <link rel="stylesheet" type="text/css" href="libraries\bootstrap\bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="..\..\libraries\bootstrap\bootstrap.min.css">
 	
 	<!-- Font Icons -->
-	<link rel="stylesheet" type="text/css" href="libraries\fonts\font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="..\..\libraries\fonts\font-awesome.min.css">
 
 	<!-- Library - OWL Carousel V.2.0 beta -->
-	<link rel="stylesheet" type="text/css" href="libraries\owl-carousel\owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="libraries\owl-carousel\owl.theme.css">
+	<link rel="stylesheet" type="text/css" href="..\..\libraries\owl-carousel\owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="..\..\libraries\owl-carousel\owl.theme.css">
 
 	<!-- Library - Animate CSS -->
-	<link rel="stylesheet" type="text/css" href="libraries\animate\animate.min.css">
+	<link rel="stylesheet" type="text/css" href="..\..\libraries\animate\animate.min.css">
 	
 	<!-- Library - Price Filter -->
-	<link rel="stylesheet" type="text/css" href="libraries\price-filter\jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="..\..\libraries\price-filter\jquery-ui.min.css">
 
 	<!-- Custom - Common CSS -->
-	<link rel="stylesheet" type="text/css" href="css\plugins.css">
-	<link rel="stylesheet" type="text/css" href="css\navigation-menu.css">
+	<link rel="stylesheet" type="text/css" href="..\..\css\plugins.css">
+	<link rel="stylesheet" type="text/css" href="..\..\css\navigation-menu.css">
 
 	<!-- Custom - Theme CSS -->
 	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
-	<link rel="stylesheet" type="text/css" href="css\shortcodes.css">
+	<link rel="stylesheet" type="text/css" href="..\..\css\shortcodes.css">
 
 	<!--[if lt IE 9]>
-		<script src="js/html5/respond.min.js"></script>
+		<script src="../../js/html5/respond.min.js"></script>
     <![endif]-->
 </head>
 
@@ -93,11 +93,11 @@
 						</div>
 						<div class="social col-md-4 col-sm-4 col-xs-6 pull-right">
 							<ul class="no-bottom-margin">
-								<li><a href="#"><img src="images\icon\tw-ic.png" alt="Twitter"></a></li>
-								<li><a href="#"><img src="images\icon\fb-ic.png" alt="Facebook"></a></li>	
-								<li><a href="#"><img src="images\icon\g -ic.png" alt="Google pulse"></a></li>
-								<li><a href="#"><img src="images\icon\dribbble-ic.png" alt="dribbler"></a></li>
-								<li><a href="#"><img src="images\icon\in-ic.png" alt="In"></a></li>
+								<li><a href="#"><img src="..\..\images\icon\tw-ic.png" alt="Twitter"></a></li>
+								<li><a href="#"><img src="..\..\images\icon\fb-ic.png" alt="Facebook"></a></li>
+								<li><a href="#"><img src="..\..\images\icon\g -ic.png" alt="Google pulse"></a></li>
+								<li><a href="#"><img src="..\..\images\icon\dribbble-ic.png" alt="dribbler"></a></li>
+								<li><a href="#"><img src="..\..\images\icon\in-ic.png" alt="In"></a></li>
 							</ul>					
 						</div>
 					</div>
@@ -112,24 +112,24 @@
 					<div class="row">
 						<div class="col-md-3 logo-block pull-left">
 							<a href="#">
-								<img src="images\logo.png" alt="Logo">
+								<img src="..\..\images\logo.png" alt="Logo">
 							</a>
 						</div>
 						<div class="col-md-9 pull-right">
 							<div class="location">
-								<img src="images\icon\location-ic.png" alt="Location">
+								<img src="..\..\images\icon\location-ic.png" alt="Location">
 								<p><span>Our Location</span> 50- Design Street, Texas</p>
 							</div>
 							<div class="time-scheduled">
-								<img src="images\icon\time-ic.png" alt="time">
+								<img src="..\..\images\icon\time-ic.png" alt="time">
 								<p><span>Mon - Sat</span> 8 am - 10 pm</p>
 							</div>
 							<div class="phone">
-								<img src="images\icon\phone-ic.png" alt="phone">
+								<img src="..\..\images\icon\phone-ic.png" alt="phone">
 								<p><span>Call Us</span> +1 (0) 234 56 789</p>
 							</div>
 							<div class="cart">
-								<a href="#"><img src="images\icon\cart-ic.png" alt="png"><span>10</span></a>
+								<a href="#"><img src="..\..\images\icon\cart-ic.png" alt="png"><span>10</span></a>
 							</div>
 						</div>
 					</div>
@@ -147,7 +147,7 @@
 							</button>
 							<div class="navbar-brand logo-block">
 								<a href="#">
-									<img src="images\logo.png" alt="Logo">
+									<img src="..\..\images\logo.png" alt="Logo">
 								</a>
 							</div>
 						</div>
@@ -189,23 +189,10 @@
 			</nav>
 		</header><!-- Header /- -->
 		
-		<!-- Page Banner -->
-		<div class="container-fluid no-padding page-banner">
-			<!-- Container -->
-			<div class="container">
-				<!-- Banner Heading -->
-				<div class="banner-heading">
-					<h3>Blog - Single Post</h3>
-					<ol class="breadcrumb">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Blog</a></li>
-						<li class="active">Post Detail</li>
-					</ol>
-				</div><!-- Banner Heading /- -->
-			</div><!-- Container /- -->
-		</div><!-- Page Banner /- -->
+
 		
 		<!-- Blog List -->
+
 		<div class="container-fluid no-padding blog-list">	
 			<div class="section-padding"></div>
 			<!-- Container -->
@@ -214,12 +201,12 @@
 					<!-- Blog Area -->
 					<div class="col-md-9 col-sm-9 col-xs-12 blog-area single-post">
 						<div class="section-title">
-							<h3>Updates from Our Shop</h3>
-							<p>In a freak mishap ranger and its pilot captain william buck rogers are blown</p>
+							<h3>{{$post->titulo}}</h3>
+							<p>{{$post->descripcion}}</p>
 						</div>
 						<article>
 							<div class="entry-cover">
-								<img src="images\blog\blog-1.jpg" alt="blog-1">
+								<img src="../../uploads/{{$post->imagenprincipal}}" alt="blog-1">
 							</div>	
 							<!-- Post Content -->
 							<div class="post-content">
@@ -229,60 +216,27 @@
 										<span>28</span>
 									</div>
 									<div class="post-comment">
-										<i><img src="images\icon\comment.png" alt="Comment"></i>
+										<i><img src="..\..\images\icon\comment.png" alt="Comment"></i>
 										<a href="#">17</a>
 									</div>
 									<div class="post-like">
-										<i><img src="images\icon\blog-like.png" alt="Comment"></i>
+										<i><img src="..\..\images\icon\blog-like.png" alt="Comment"></i>
 										<a href="#">13</a>
 									</div>							
 									<div class="post-share pull-right">
 										<a href="#"><i class="fa fa-reply"></i>Reply</a>
-										<a href="#"><i><img src="images\icon\share.png" alt="Comment"></i>Share</a>
+										<a href="#"><i><img src="..\..\images\icon\share.png" alt="Comment"></i>Share</a>
 									</div>
 								</div>						
-								<h3 class="entry-title">Special care on Your Lovely Pets by Veterinary physician</h3>
-								<div class="entry-content">
-									<p>The weather started getting rough the tiny ship was tossed if not for the courage of the fearless crew the Minnow would be lost the minnow lost.  Come and knock on our door. We've been waiting for you. Where the kisses are hers and hers and his three company too. Michael Knight a young loner on a crusade to champion the cause of the innocent is the tale of our castaways they're here for a long long time not for the courage of the fearless crew the Minnow the </p>
-									<p>Thank you for being a friend. Travelled down the road and back again. Your heart is true you're a pal and a confidant michael knight a young loner on a crusade to champion the cause of the innocent the helpless the powerless in a world of criminals who operate above the law. Come and knock on our door. We've been waiting for you.</p>
-									<blockquote>
-										<p>The Love Boat soon will be making another run. The Love Boat promises something for everyone. Till the one day when the lady met this fellow and they knew it was much more than a hunch. So join us here each week my friends you're sure to get a smile from seven stranded castaways here on Gilligans Isle.</p>
-									</blockquote>
-									<!-- Entry Thumb -->
-									<div class="entry-thumb">
-										<div class="col-md-3 col-sm-6 col-xs-12">
-											<div class="entry-thumb-item">
-												<a href="#"><img src="images\blog\blog-thumb-1.jpg" alt="blog-thumb-1"></a>
-												<a href="#" class="img-zoom"><img src="images\icon\search.png" alt="search"></a>
-											</div>
-										</div>
-										<div class="col-md-3 col-sm-6 col-xs-12">
-											<div class="entry-thumb-item">
-												<a href="#"><img src="images\blog\blog-thumb-2.jpg" alt="blog-thumb-2"></a>
-												<a href="#" class="img-zoom"><img src="images\icon\search.png" alt="search"></a>
-											</div>
-										</div>
-										<div class="col-md-3 col-sm-6 col-xs-12">
-											<div class="entry-thumb-item">
-												<a href="#"><img src="images\blog\blog-thumb-3.jpg" alt="blog-thumb-3"></a>
-												<a href="#" class="img-zoom"><img src="images\icon\search.png" alt="search"></a>
-											</div>
-										</div>
-										<div class="col-md-3 col-sm-6 col-xs-12">
-											<div class="entry-thumb-item">
-												<a href="#"><img src="images\blog\blog-thumb-4.jpg" alt="blog-thumb-4"></a>
-												<a href="#" class="img-zoom"><img src="images\icon\search.png" alt="search"></a>
-											</div>
-										</div>
-									</div><!-- Entry Thumb /- -->
-									<p>Tossed if not for the courage of the fearless crew the Minnow would be lost the minnow lost.  Come and knock on our door. We've been waiting for you. Where the kisses are hers and hers and his three company too michael.</p>
-								</div>
+
+								{!! $post->contenido !!}
+
 								<div class="entry-footer">
 									<div class="post-admin">
-										<i><img src="images\icon\admin-ic.png" alt="admin-ic"></i>Posted by<a href="#">Admin</a>
+										<i><img src="..\..\images\icon\admin-ic.png" alt="admin-ic"></i>Posted by<a href="#">Admin</a>
 									</div>
 									<div class="tags">
-										<i><img src="images\icon\tags.png" alt="Tags"></i>
+										<i><img src="..\..\images\icon\tags.png" alt="Tags"></i>
 										<a href="#">Pets</a>
 										<a href="#">Veterinary</a>
 										<a href="#">Dog</a>
@@ -296,7 +250,7 @@
 						<!-- About Author -->
 						<div class="about-author">
 							<div class="author-img">
-								<a href="#" title="Selina Carmel"><img alt="author" src="images\author\author.jpg"></a>
+								<a href="#" title="Selina Carmel"><img alt="author" src="..\..\images\author\author.jpg"></a>
 							</div>
 							<div class="author-content">
 								<a href="#">Selina Carmel</a>
@@ -316,7 +270,7 @@
 							<ul class="media-list">
 								<li class="media">
 									<div class="media-left">
-										<a href="#" title="Larsen Mortin"><img alt="comment" src="images\comment\comment-1.jpg" class="media-object-1"></a>
+										<a href="#" title="Larsen Mortin"><img alt="comment" src="..\..\images\comment\comment-1.jpg" class="media-object-1"></a>
 									</div>
 									<div class="media-body">
 										<div class="media-heading">
@@ -328,7 +282,7 @@
 								</li>
 								<li class="media">
 									<div class="media-left">
-										<a href="#" title="Albert Jonse"><img alt="comment-2" src="images\comment\comment-2.jpg" class="media-object-1"></a>
+										<a href="#" title="Albert Jonse"><img alt="comment-2" src="..\..\images\comment\comment-2.jpg" class="media-object-1"></a>
 									</div>
 									<div class="media-body">
 										<div class="media-heading">
@@ -340,7 +294,7 @@
 								</li>
 								<li class="media">
 									<div class="media-left">
-										<a href="#" title="Milana Rose"><img alt="comment-3" src="images\comment\comment-3.jpg" class="media-object-1"></a>
+										<a href="#" title="Milana Rose"><img alt="comment-3" src="..\..\images\comment\comment-3.jpg" class="media-object-1"></a>
 									</div>
 									<div class="media-body">
 										<div class="media-heading">
@@ -407,7 +361,7 @@
 							</div>
 							<div class="recent-post-box">
 								<div class="recent-img">
-									<a href="#"><img src="images\widget\recent\recent-1.jpg" alt="recent-1"></a>
+									<a href="#"><img src="..\..\images\widget\recent\recent-1.jpg" alt="recent-1"></a>
 								</div>
 								<div class="recent-title">
 									<a href="#">Like Robinson Crusoe it is Primitive as can be</a>
@@ -416,7 +370,7 @@
 							</div>
 							<div class="recent-post-box">
 								<div class="recent-img">
-									<a href="#"><img src="images\widget\recent\recent-2.jpg" alt="recent-2"></a>
+									<a href="#"><img src="..\..\images\widget\recent\recent-2.jpg" alt="recent-2"></a>
 								</div>
 								<div class="recent-title">
 									<a href="#">There's nothing can hold me when I hold you</a>
@@ -425,7 +379,7 @@
 							</div>
 							<div class="recent-post-box">
 								<div class="recent-img">
-									<a href="#"><img src="images\widget\recent\recent-3.jpg" alt="recent-3"></a>
+									<a href="#"><img src="..\..\images\widget\recent\recent-3.jpg" alt="recent-3"></a>
 								</div>
 								<div class="recent-title">
 									<a href="#">Five passengers set sail that day for a three hour</a>
@@ -495,9 +449,9 @@
 							<h3 class="widget-title">about Us</h3>
 							<p>Hello we are Comre. We are here to provide you the best offers through our coupons. Hello we are company.</p>
 							<ul>
-								<li><img src="images\icon\ftr-location.png" alt="Address">Washington Square Park, <span>NY, United States</span></li>
-								<li><img src="images\icon\ftr-customer.png" alt="Phone"> Customer Support : <span>+ 124 45 76 678</span></li>
-								<li><img src="images\icon\ftr-email.png" alt="Mail"><span>Email :</span><a href="mailto:mail@woodsman.com"> mail@woodsman.com</a></li>
+								<li><img src="..\..\images\icon\ftr-location.png" alt="Address">Washington Square Park, <span>NY, United States</span></li>
+								<li><img src="..\..\images\icon\ftr-customer.png" alt="Phone"> Customer Support : <span>+ 124 45 76 678</span></li>
+								<li><img src="..\..\images\icon\ftr-email.png" alt="Mail"><span>Email :</span><a href="mailto:mail@woodsman.com"> mail@woodsman.com</a></li>
 							</ul>
 						</aside>
 					</div>
@@ -528,12 +482,12 @@
 								</div><!-- /input-group -->
 							</div>
 							<ul>
-								<li><a href="#"><img src="images\icon\ftr-fb.png" alt="ftr"></a></li>
-								<li><a href="#"><img src="images\icon\ftr-g .png" alt="ftr"></a></li>
-								<li><a href="#"><img src="images\icon\ftr-tumbler.png" alt="ftr"></a></li>
-								<li><a href="#"><img src="images\icon\ftr-dribbble.png" alt="ftr"></a></li>
-								<li><a href="#"><img src="images\icon\ftr-ln.png" alt="ftr"></a></li>
-								<li><a href="#"><img src="images\icon\ftr-tw.png" alt="ftr"></a></li>
+								<li><a href="#"><img src="..\..\images\icon\ftr-fb.png" alt="ftr"></a></li>
+								<li><a href="#"><img src="..\..\images\icon\ftr-g .png" alt="ftr"></a></li>
+								<li><a href="#"><img src="..\..\images\icon\ftr-tumbler.png" alt="ftr"></a></li>
+								<li><a href="#"><img src="..\..\images\icon\ftr-dribbble.png" alt="ftr"></a></li>
+								<li><a href="#"><img src="..\..\images\icon\ftr-ln.png" alt="ftr"></a></li>
+								<li><a href="#"><img src="..\..\images\icon\ftr-tw.png" alt="ftr"></a></li>
 							</ul>
 						</aside>
 					</div>
@@ -558,33 +512,33 @@
 		
 	</div><!-- Main Container -->
 	<!-- JQuery v1.11.3 -->
-	<script src="js\jquery.min.js"></script>
+	<script src="..\..\js\jquery.min.js"></script>
 
 	<!-- Library - Modernizer -->
-	<script src="libraries\modernizr\modernizr.js"></script>
+	<script src="..\..\libraries\modernizr\modernizr.js"></script>
 	
 	<!-- Library - Bootstrap v3.3.5 -->
-	<script src="libraries\bootstrap\bootstrap.min.js"></script><!-- Bootstrap JS File v3.3.5 -->
+	<script src="..\..\libraries\bootstrap\bootstrap.min.js"></script><!-- Bootstrap JS File v3.3.5 -->
 
 	<!-- jQuery Easing v1.3 -->
-	<script src="js\jquery.easing.min.js"></script>
+	<script src="..\..\js\jquery.easing.min.js"></script>
 
 	<!-- Library - jQuery.appear -->
-	<script src="libraries\appear\jquery.appear.js"></script>
+	<script src="..\..\libraries\appear\jquery.appear.js"></script>
 	
 	<!-- Library - OWL Carousel V.2.0 beta -->
-	<script src="libraries\owl-carousel\owl.carousel.min.js"></script>
+	<script src="..\..\libraries\owl-carousel\owl.carousel.min.js"></script>
 	
 	<!-- jQuery For Number Counter -->	
-	<script src="libraries\number\jquery.animateNumber.min.js"></script>
+	<script src="..\..\libraries\number\jquery.animateNumber.min.js"></script>
 
 	<!-- Library - Google Map API -->
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 	
 	<!-- Library - Price Filter -->
-	<script src="libraries\price-filter\jquery-ui.min.js"></script>
+	<script src="..\..\libraries\price-filter\jquery-ui.min.js"></script>
 	
 	<!-- Library - Theme JS -->
-	<script src="js\functions.js"></script>
+	<script src="..\..\js\functions.js"></script>
 </body>
 </html>
