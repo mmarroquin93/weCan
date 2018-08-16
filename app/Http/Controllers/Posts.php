@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
+use App\Tag;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Post;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Storage;
 
@@ -23,7 +26,9 @@ class Posts extends Controller
         $file=$request->file('image');
         Storage::disk('public')->put($file->getClientOriginalName(), file_get_contents($file));
 
-        $post->imagenprincipal=$file->getClientOriginalName(); ;
+        $post->imagenprincipal=$file->getClientOriginalName();
+
+        $post->contenido()->unsearchable();
 
     $post->save();
 
@@ -36,6 +41,7 @@ class Posts extends Controller
 
         $post=Post::all() ;
 
+
         return view( 'controlpanel.blogadmin',compact("post"));
 
     }
@@ -45,7 +51,18 @@ class Posts extends Controller
         $post = Post::where( 'url', '=', $titulo)->first();
         return view( 'single-blog',compact("post"));
 
-//        return view(single-blog,compact('post'));
-        return $post->titulo;
+        return view( 'single-blog',compact('post'));
+
+    }
+
+
+    public function postsblog(){
+
+
+        $post=DB::table('posts')->paginate(4);
+        $categorias=Category::all();
+        $tags=Tag::all();
+
+        return view('blog',compact('post',"categorias","tags"));
     }
 }

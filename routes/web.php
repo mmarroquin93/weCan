@@ -23,9 +23,7 @@ Route::get('/galeria', function () {
 Route::get('/gracias-a-ti', function () {
     return view('index');
 });
-Route::get('/blog', function () {
-    return view('blog');
-});
+Route::get('/blog', 'Posts@postsblog');
 
 Route::get('/blog/{titulo}', 'Posts@getpost');
 
@@ -41,7 +39,8 @@ Route::get('/tienda','Tienda@listar');
 
 //blog
 
-Route::get('/controlpanel/blog', 'Posts@listar');
+Route::get('/controlpanel/blog', 'Posts@listar')->name('blog');
+
 
 Route::get('/controlpanel/nuevopost', function () {
     return view('controlpanel.newpost');
@@ -53,7 +52,21 @@ Route::get('/ejemplito','Posts@listar');
 
 //termina blog
 
+//categorias
+Route::get('/controlpanel/blog/categorias', 'Categories@listar')->name('categorias');
+Route::get('/controlpanel/blog/categorias/new', 'Categories@addview');
+Route::post('/controlpanel/blog/categorias/add', 'Categories@add');
+Route::get('/controlpanel/blog/categorias/modificar/{id}', 'Categories@updateview');
+Route::post('/controlpanel/blog/categorias/modificar', 'Categories@update');
+//termina categorias
 
+//Tags
+Route::get('/controlpanel/blog/tags', 'Tags@listar')->name('tags');
+Route::get('/controlpanel/blog/tags/new', 'Tags@addview');
+Route::post('/controlpanel/blog/tags/add', 'Tags@add');
+Route::get('/controlpanel/blog/tags/modificar/{id}', 'Tags@updateview');
+Route::post('/controlpanel/blog/tags/modificar', 'Tags@update');
+//termina Tags
 
 Auth::routes();
 

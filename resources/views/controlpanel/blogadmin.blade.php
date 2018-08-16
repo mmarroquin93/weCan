@@ -36,6 +36,20 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav mr-auto">
 
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Blog
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{route('blog')}}">Post</a>
+                            <a class="dropdown-item" href="{{route('categorias')}}">Categorias</a>
+                            <a class="dropdown-item" href="{{route('tags')}}">Tags</a>
+
+                        </div>
+                    </li>
+
+
+
                 </ul>
 
                 <!-- Right Side Of Navbar -->
