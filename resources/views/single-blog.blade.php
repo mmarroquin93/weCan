@@ -333,12 +333,27 @@
 					<div class="col-md-3 col-sm-3 col-xs-12 widget-area">
 						<!-- Widget Search -->
 						<aside class="widget widget-search">
-							<div class="input-group">
-								<input type="text" required="" class="form-control" placeholder="Search Post Here...">
-								<span class="input-group-btn">
-									<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-								</span>
-							</div>
+							{{--<div class="input-group">--}}
+								{{--<input type="text" required="" class="form-control" placeholder="Search Post Here...">--}}
+								{{--<span class="input-group-btn">--}}
+									{{--<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>--}}
+								{{--</span>--}}
+							{{--</div>--}}
+
+
+							<form method="GET" action="{{ url('blogsearch') }}">
+								<div class="row">
+									<div class="col-md-6">
+										<input type="text" name="search" class="form-control" placeholder="Search">
+									</div>
+									<div class="col-md-6">
+										<button class="btn btn-info">Search</button>
+									</div>
+								</div>
+							</form>
+
+
+
 						</aside><!-- Widget Search /- -->
 						<!-- Widget Categories -->
 						<aside class="widget widget-categories">

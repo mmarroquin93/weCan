@@ -28,7 +28,7 @@ class Posts extends Controller
 
         $post->imagenprincipal=$file->getClientOriginalName();
 
-        $post->contenido()->unsearchable();
+        $post->contenido;
 
     $post->save();
 

@@ -50,6 +50,9 @@ Route::post('/controlpanel/nuevopost/add','Posts@add');
 
 Route::get('/ejemplito','Posts@listar');
 
+
+Route::get('blogsearch','SearchController@search');
+
 //termina blog
 
 //categorias

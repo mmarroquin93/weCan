@@ -276,12 +276,24 @@
 					<div class="col-md-3 col-sm-3 col-xs-12 widget-area">
 						<!-- Widget Search -->
 						<aside class="widget widget-search">
-							<div class="input-group">
-								<input type="text" required="" class="form-control" placeholder="Search Post Here...">
-								<span class="input-group-btn">
-									<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-								</span>
+							{{--<div class="input-group">--}}
+								{{--<input type="text" required="" class="form-control" placeholder="Search Post Here...">--}}
+								{{--<span class="input-group-btn">--}}
+									{{--<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>--}}
+								{{--</span>--}}
+							{{--</div>--}}
+
+
+
+							<div class="aa-input-container" id="aa-input-container">
+								<input type="search" id="aa-search-input" class="aa-input-search" placeholder="Search for players or teams..." name="search" autocomplete="off" />
+								<svg class="aa-input-icon" viewBox="654 -372 1664 1664">
+									<path d="M1806,332c0-123.3-43.8-228.8-131.5-316.5C1586.8-72.2,1481.3-116,1358-116s-228.8,43.8-316.5,131.5  C953.8,103.2,910,208.7,910,332s43.8,228.8,131.5,316.5C1129.2,736.2,1234.7,780,1358,780s228.8-43.8,316.5-131.5  C1762.2,560.8,1806,455.3,1806,332z M2318,1164c0,34.7-12.7,64.7-38,90s-55.3,38-90,38c-36,0-66-12.7-90-38l-343-342  c-119.3,82.7-252.3,124-399,124c-95.3,0-186.5-18.5-273.5-55.5s-162-87-225-150s-113-138-150-225S654,427.3,654,332  s18.5-186.5,55.5-273.5s87-162,150-225s138-113,225-150S1262.7-372,1358-372s186.5,18.5,273.5,55.5s162,87,225,150s113,138,150,225  S2062,236.7,2062,332c0,146.7-41.3,279.7-124,399l343,343C2305.7,1098.7,2318,1128.7,2318,1164z" />
+								</svg>
 							</div>
+
+
+
 						</aside><!-- Widget Search /- -->
 						<!-- Widget Categories -->
 						<aside class="widget widget-categories">
@@ -467,5 +479,49 @@
 	
 	<!-- Library - Theme JS -->
 	<script src="js\functions.js"></script>
+
+
+
+	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+
+	<script>
+        var client = algoliasearch('GR0MC7KRYS', 'c58cda73d80442f706486f4d5be666eb');
+        var index = client.initIndex('posts');
+
+        autocomplete('#aa-search-input',
+            { hint: false }, {
+                source: autocomplete.sources.hits(index, {hitsPerPage: 5}),
+
+                displayKey: 'name',
+
+                templates: {
+
+                    suggestion: function(suggestion) {
+                        return '         <div class="recent-post-box" style="padding-bottom: 0px;">\n' +
+                            ' <div class="recent-img">\n' +
+                            ' <a href="#"><img src="../../../uploads/'+suggestion.imagenprincipal +'" style="width: 82px; height:72px;margin-top: -25%;"></a>' +
+                            ' </div>\n' +
+                            ' <div class="recent-title" style="margin-top: -10%;">\n' +
+
+                            ' <a href="#">'+suggestion.titulo +'</a></br>'+
+
+                            ' <p style="    margin-bottom: 0px;">'+suggestion.descripcion.substr(0, 100) +'</p></br>'	+
+                            ' </div>\n' +
+                            ' </div>';
+
+
+
+                        // '<a href="../../../../blog/'+suggestion.url+'" >'+'<span>'+
+                        // suggestion._highlightResult.titulo.value + '</span><span>' +
+                        // suggestion._highlightResult.descripcion.value + '</span></a>'
+
+
+                    }
+                }
+            });
+	</script>
+
+
 </body>
 </html>

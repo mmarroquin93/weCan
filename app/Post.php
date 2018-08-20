@@ -10,5 +10,15 @@ class Post extends Model
     //
     protected $fillable = ['titulo','contenido','url','descripcion','imagenprincipal'];
 
+    public function toSearchableArray()
+    {
+        $post = $this->toArray();
+
+
+
+        unset($post['contenido']);
+
+        return $post;
+    }
 
 }
