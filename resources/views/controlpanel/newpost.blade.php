@@ -33,25 +33,33 @@
 </head>
 <body>
 
-<form id="formpost" method="post" enctype="multipart/form-data">
-    {!! csrf_field() !!}
+
+<div class="container">
+
+
+    <form method="POST" action="/controlpanel/nuevopost/add"  id="formulario" enctype="multipart/form-data">
+        @csrf
+
+
 <div class="form-group">
     <label for="exampleInputEmail1">Titulo</label>
-    <input type="text" class="form-control" id="titulo" aria-describedby="Titulodesc" placeholder="Ingresa un titulo" required>
+    <input type="text" class="form-control" id="titulo" name="titulo" aria-describedby="Titulodesc" placeholder="Ingresa un titulo" required>
 
 </div>
 
 <div class="form-group">
     <label for="exampleFormControlTextarea1">Descripcion del post</label>
-    <textarea class="form-control" id="descripcion" rows="3" required></textarea>
+    <textarea class="form-control" name="descripcion" id="descripcion" rows="3" required></textarea>
 </div>
 
 <div class="form-group">
-    <label for="exampleInputFile">File input</label>
-    <input type="file" id="fotoprincipal" required>
-    <p class="help-block">Example block-level help text here.</p>
+    <label for="exampleInputFile">Foto Principal</label>
+    <input type="file" name="imagen" id="fotoprincipal" required>
+
 </div>
 
+
+    <h3 style="margin-top: 5%">Escribir Blog</h3>
 
 <div class="quill-wrap">
     <!-- Create the toolbar container -->
@@ -101,14 +109,52 @@
     </div>
 
     <!-- Create the editor container -->
-    <div id="editor">
+    <div id="editor" >
 
     </div>
 </div>
 
+        <input type="hidden" name="editorsito">
 
 
-    <button type="submit" class="waves-effect waves-green btn blue">Submit</button>
+
+
+        <div class="row">
+            <div class="col-sm">
+
+                <h3 style="margin-top: 5%">Seleccionar los Tags</h3>
+
+                @foreach($tags as $tag)
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="tag[]" value="{{$tag->id}}" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            {{$tag->nombre}}
+                        </label>
+                    </div>
+                @endforeach
+
+
+            </div>
+            <div class="col-sm">
+
+                <h3 style="margin-top: 5%">Seleccionar los Categorias</h3>
+
+                @foreach($categorias as $categoria)
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="categoria[]" value="{{$categoria->id}}" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            {{$categoria->nombre}}
+                        </label>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+
+
+
+
+
+    <button type="submit" class="waves-effect waves-green btn blue">Guardar</button>
 
 
 </form>
@@ -120,7 +166,7 @@
 <script>
     $(document).ready(function(){
 
-    var editor = new Quill('#editor', {
+    var editore = new Quill('#editor', {
         modules: {
             toolbar: '#toolbar',
             imageResize: {
@@ -130,44 +176,51 @@
         theme: 'snow'
     });
 
+        var form = document.getElementById("formulario"); // get form by ID
+        form.onsubmit = function() { // onsubmit do this first
+            var name = document.querySelector('input[name=editorsito]'); // set name input var
+            name.value = editore.root.innerHTML;
+
+            return true;
 
 
+        }
 
 
-            $('#formpost').on("submit", function(e) {
-                e.preventDefault();
-                var titulo = $("#titulo").val();
-
-                var descripcion = $("#descripcion").val();
-                var editor_content = editor.container.firstChild.innerHTML
-                // alert(editor_content);
-                // console.log(editor_content);
-                var image = $('#fotoprincipal')[0].files[0];
-                var form = new FormData();
-                form.append('titulo', titulo);
-                form.append('editor_content', editor_content);
-                form.append('descripcion', descripcion);
-                form.append('image', image);
-
-                $.ajax({
-                    type: "POST",
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    },
-                    url: "/controlpanel/nuevopost/add",
-                    cache: false,
-                    contentType: false,
-                    processData: false,
-                    data: form,
-                    success: function (data) {
-
-                        alert("Post guardado con exito")
-                        location.href ="../../controlpanel/blog";
-                        console.log(data);
-                    }
-                });
-
-            });
+            // $('#formpost').on("submit", function(e) {
+            //     e.preventDefault();
+            //     var titulo = $("#titulo").val();
+            //
+            //     var descripcion = $("#descripcion").val();
+            //     var editor_content = editor.container.firstChild.innerHTML
+            //     // alert(editor_content);
+            //     // console.log(editor_content);
+            //     var image = $('#fotoprincipal')[0].files[0];
+            //     var form = new FormData();
+            //     form.append('titulo', titulo);
+            //     form.append('editor_content', editor_content);
+            //     form.append('descripcion', descripcion);
+            //     form.append('image', image);
+            //
+            //     $.ajax({
+            //         type: "POST",
+            //         headers: {
+            //             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            //         },
+            //         url: "/controlpanel/nuevopost/add",
+            //         cache: false,
+            //         contentType: false,
+            //         processData: false,
+            //         data: form,
+            //         success: function (data) {
+            //
+            //             // alert("Post guardado con exito")
+            //             // location.href ="../../controlpanel/blog";
+            //             console.log(data);
+            //         }
+            //     });
+            //
+            // });
 
     });
 </script>

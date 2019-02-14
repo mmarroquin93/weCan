@@ -23,7 +23,11 @@ Route::get('/galeria', function () {
 Route::get('/gracias-a-ti', function () {
     return view('index');
 });
+Route::get('/servicios', function () {
+    return view('error');
+});
 Route::get('/blog', 'Posts@postsblog');
+Route::get('/blog/tag/{url}', 'Tags@tagindex');
 
 Route::get('/blog/{titulo}', 'Posts@getpost');
 
@@ -42,9 +46,7 @@ Route::get('/tienda','Tienda@listar');
 Route::get('/controlpanel/blog', 'Posts@listar')->name('blog');
 
 
-Route::get('/controlpanel/nuevopost', function () {
-    return view('controlpanel.newpost');
-});
+Route::get('/controlpanel/nuevopost', 'Posts@addshow');
 
 Route::post('/controlpanel/nuevopost/add','Posts@add');
 

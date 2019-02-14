@@ -25,11 +25,13 @@
 							<p>Tips, historias y más</p>
 						</div>
 
-						@foreach($post as $posts)
+
+
+						@foreach($tag->post as $posts)
 						<article>
 							<div class="entry-cover">
-								<a href="../blog/{{$posts->url}}"><img src="../uploads/{{$posts->imagenprincipal}}" alt="blog-1"></a>
-								<a href="../blog/{{$posts->url}}" class="read-more">Leer más </a>
+								<a href="../../../../blog/{{$posts->url}}"><img src="../../../uploads/{{$posts->imagenprincipal}}" alt="blog-1"></a>
+								<a href="../../../../blog/{{$posts->url}}" class="read-more">Leer más </a>
 							</div>	
 							<!-- Post Content -->
 							<div class="post-content">
@@ -39,12 +41,12 @@
 										<span>{{date('d', strtotime($posts->created_at)) }}</span>
 									</div>
 									<div class="post-comment">
-										<i><img src="images\icon\comment.png" alt="Comment"></i>
-										<a href="#">17</a>
+										{{--<i><img src="images\icon\comment.png" alt="Comment"></i>--}}
+										{{--<a href="#">17</a>--}}
 									</div>
 									<div class="post-like">
-										<i><img src="images\icon\blog-like.png" alt="Comment"></i>
-										<a href="#">13</a>
+										{{--<i><img src="images\icon\blog-like.png" alt="Comment"></i>--}}
+										{{--<a href="#">13</a>--}}
 									</div>							
 									<div class="post-share pull-right">
 										{{--<a href="#"><i class="fa fa-reply"></i>Reply</a>--}}
@@ -60,7 +62,7 @@
 										{{--<i><img src="images\icon\admin-ic.png" alt="admin-ic"></i>Posted by<a href="#">Admin</a>--}}
 									</div>
 									<div class="tags">
-										<i><img src="images\icon\tags.png" alt="Tags"></i>
+										<i><img src="../../../images\icon\tags.png" alt="Tags"></i>
 										@foreach($posts->tag as $tags)
 											<a href="../../../blog/tag/{{$tags->url}}">{{$tags->nombre}}</a>
 										@endforeach
@@ -73,7 +75,7 @@
 						<div class="section-padding"></div>
 						<!-- Pagination -->
 
-					{{$post->links()}}
+
 
 						{{--<ul class="pagination">					--}}
 							{{--<li>--}}
@@ -133,16 +135,16 @@
 								<h3>Post Recientes</h3>
 							</div>
 
-							@foreach($postes as $posts)
-								<div class="recent-post-box">
-									<div class="recent-img">
-										<a href="../../../blog/{{$posts->url}}"><img src="../../../uploads/{{$posts->imagenprincipal}}" alt="recent-1" style="    max-width: 43%;"></a>
-									</div>
-									<div class="recent-title">
-										<a href="#">{{$posts->titulo}}</a>
-										<p><span><i class="fa fa-calendar"></i></span>{{date('M', strtotime($posts->created_at)) }} {{date('d', strtotime($posts->created_at)) }}, {{date('Y', strtotime($posts->created_at)) }} </p>
-									</div>
+							@foreach($post as $posts)
+							<div class="recent-post-box">
+								<div class="recent-img">
+									<a href="../../../blog/{{$posts->url}}"><img src="../../../uploads/{{$posts->imagenprincipal}}" alt="recent-1" style="    max-width: 43%;"></a>
 								</div>
+								<div class="recent-title">
+									<a href="#">{{$posts->titulo}}</a>
+									<p><span><i class="fa fa-calendar"></i></span>{{date('M', strtotime($posts->created_at)) }} {{date('d', strtotime($posts->created_at)) }}, {{date('Y', strtotime($posts->created_at)) }} </p>
+								</div>
+							</div>
 							@endforeach
 
 						</aside><!-- Widget Recent Post /- -->
@@ -155,7 +157,13 @@
 							</div>
 							<div class="tags-content">
 								@foreach($tagss as $tages)
-								<a href="#" title="{{$tages->nombre}}">{{$tages->nombre}}</a>
+
+@if($tages->url == $url)
+										<a href="#" title="{{$tages->nombre}}" style="    background-color: #313131;    color: #fff;">{{$tages->nombre}}</a>
+	@else
+										<a href="#" title="{{$tages->nombre}}">{{$tages->nombre}}</a>
+	@endif
+
 
 									@endforeach
 							</div>
@@ -257,34 +265,34 @@
 		
 	</div><!-- Main Container -->
 	<!-- JQuery v1.11.3 -->
-	<script src="js\jquery.min.js"></script>
+	<script src="../../../js\jquery.min.js"></script>
 
 	<!-- Library - Modernizer -->
-	<script src="libraries\modernizr\modernizr.js"></script>
+	<script src="../../../libraries\modernizr\modernizr.js"></script>
 	
 	<!-- Library - Bootstrap v3.3.5 -->
-	<script src="libraries\bootstrap\bootstrap.min.js"></script><!-- Bootstrap JS File v3.3.5 -->
+	<script src="../../../libraries\bootstrap\bootstrap.min.js"></script><!-- Bootstrap JS File v3.3.5 -->
 
 	<!-- jQuery Easing v1.3 -->
-	<script src="js\jquery.easing.min.js"></script>
+	<script src="../../../js\jquery.easing.min.js"></script>
 
 	<!-- Library - jQuery.appear -->
-	<script src="libraries\appear\jquery.appear.js"></script>
+	<script src="../../../libraries\appear\jquery.appear.js"></script>
 	
 	<!-- Library - OWL Carousel V.2.0 beta -->
-	<script src="libraries\owl-carousel\owl.carousel.min.js"></script>
+	<script src="../../../libraries\owl-carousel\owl.carousel.min.js"></script>
 	
 	<!-- jQuery For Number Counter -->	
-	<script src="libraries\number\jquery.animateNumber.min.js"></script>
+	<script src="../../../libraries\number\jquery.animateNumber.min.js"></script>
 
 	<!-- Library - Google Map API -->
-	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+	<script src="../../../https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 	
 	<!-- Library - Price Filter -->
-	<script src="libraries\price-filter\jquery-ui.min.js"></script>
+	<script src="../../../libraries\price-filter\jquery-ui.min.js"></script>
 	
 	<!-- Library - Theme JS -->
-	<script src="js\functions.js"></script>
+	<script src="../../../js\functions.js"></script>
 
 
 
