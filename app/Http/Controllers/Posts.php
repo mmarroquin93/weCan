@@ -41,16 +41,14 @@ class Posts extends Controller
 //        }
 
         for ($x = 0; $x < count($request->tag); $x++) {
-
-//
-
-            $category = Tag::find($request->tag[$x]);
-            $post->tag()->attach($category);
+            $tags = Tag::find($request->tag[$x]);
+            $post->tag()->attach($tags);
+        }
 
 
-
-
-
+        for ($x = 0; $x < count($request->categoria); $x++) {
+            $category = Category::find($request->categoria[$x]);
+            $post->category()->attach($category);
         }
 
 
@@ -88,8 +86,9 @@ class Posts extends Controller
         $post = Post::where( 'url', '=', $titulo)->first();
         $postes=Post::all()->take(3);
         $tags = Tag::all();
+        $categorias = Category::all();
 
-        return view( 'single-blog',compact("post",'postes','tags'));
+        return view( 'single-blog',compact("post",'postes','tags','categorias'));
 
 
     }

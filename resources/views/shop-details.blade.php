@@ -170,7 +170,7 @@
 									<a href="#" title="Pages" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
 									<i class="ddl-switch fa fa-angle-down"></i>
 									<ul class="dropdown-menu">
-										<li><a href="error.blade.php">Error</a></li>
+										<li><a href="errors/404.blade.php">Error</a></li>
 									</ul>
 								</li>
 								<li class="dropdown">

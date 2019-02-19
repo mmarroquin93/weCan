@@ -122,7 +122,7 @@
 							</div>
 							<ul class="categories-type">
 								@foreach($categorias as $categoria)
-								<li><a href="#"> {{$categoria->nombre}}</a></li>
+								<li><a href="../../../blog/categoria/{{$categoria->url}}"> {{$categoria->nombre}}</a></li>
 
 									@endforeach
 							</ul>
@@ -136,7 +136,7 @@
 							@foreach($postes as $posts)
 								<div class="recent-post-box">
 									<div class="recent-img">
-										<a href="../../../blog/{{$posts->url}}"><img src="../../../uploads/{{$posts->imagenprincipal}}" alt="recent-1" style="    max-width: 43%;"></a>
+										<a href="../../../blog/{{$posts->url}}"><img src="../../../uploads/{{$posts->imagenprincipal}}" alt="recent-1" style="height: 70px;width: 82px"></a>
 									</div>
 									<div class="recent-title">
 										<a href="#">{{$posts->titulo}}</a>
@@ -308,15 +308,15 @@
                             '    margin-top: 20px;\n' +
                             '    padding-bottom: 20px;\n' +
                             '    width: 100%;\n' +
-                            '    position: relative;">\n' +
+                            '    position: relative;"><a href="../../../../blog/'+suggestion.url +'">\n' +
                             '                            <div class="recent-img">\n' +
-                            '                            <a href="#"><img src="../../../uploads/'+suggestion.imagenprincipal +'" alt="recent-2" style="height: 70px;width: 82px"></a>\n' +
+                            '                            <a href="../../../../blog/'+suggestion.url +'"><img src="../../../uploads/'+suggestion.imagenprincipal +'" alt="recent-2" style="height: 70px;width: 82px"></a>\n' +
                             '                            </div>\n' +
                             '                            <div class="recent-title">\n' +
-                            '                            <a href="#">'+suggestion.titulo +'</a>\n' +
+                            '                            <a href="../../../../blog/'+suggestion.url +'">'+suggestion.titulo +'</a>\n' +
                             '                        <p>'+suggestion.descripcion.substr(0, 100) +'</p>\n' +
                             '                        </div>\n' +
-                            '                        </div>\n';
+                            '                       </a> </div>\n';
 
 
 

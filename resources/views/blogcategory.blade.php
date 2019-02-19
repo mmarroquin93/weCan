@@ -124,7 +124,7 @@
 							</div>
 							<ul class="categories-type">
 								@foreach($categorias as $categoria)
-								<li><a href="../../../../blog/categoria/{{$categoria->url}}"> {{$categoria->nombre}}</a></li>
+								<li><a href="../../../blog/categoria/{{$categoria->url}}"> {{$categoria->nombre}}</a></li>
 
 									@endforeach
 							</ul>
@@ -159,9 +159,9 @@
 								@foreach($tagss as $tages)
 
 @if($tages->url == $url)
-										<a href="../../../../blog/tag/{{$tages->url}}" title="{{$tages->nombre}}" style="    background-color: #313131;    color: #fff;">{{$tages->nombre}}</a>
+										<a href="../../../blog/tag/{{$tages->url}}" title="{{$tages->nombre}}" style="    background-color: #313131;    color: #fff;">{{$tages->nombre}}</a>
 	@else
-										<a href="../../../../blog/tag/{{$tages->url}}" title="{{$tages->nombre}}">{{$tages->nombre}}</a>
+										<a href="../../../blog/tag/{{$tages->url}}" title="{{$tages->nombre}}">{{$tages->nombre}}</a>
 	@endif
 
 

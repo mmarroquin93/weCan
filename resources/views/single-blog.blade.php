@@ -38,7 +38,7 @@
 
 									<div class="post-comment">
 										{{--<i><img src="..\..\images\icon\comment.png" alt="Comment"></i>--}}
-										<a href="#">17</a>
+										{{--<a href="#">17</a>--}}
 									</div>
 									<div class="post-like">
 										{{--<i><img src="..\..\images\icon\blog-like.png" alt="Comment"></i>--}}
@@ -171,15 +171,13 @@
 						<!-- Widget Categories -->
 						<aside class="widget widget-categories">
 							<div class="widget-title">
-								<h3>Post Category</h3>						
+								<h3>Categorias</h3>
 							</div>
 							<ul class="categories-type">
-								<li><a href="#">Friendly Pets</a></li>
-								<li><a href="#">Exporting Breeds</a></li>
-								<li><a href="#">Hunters Pet</a></li>
-								<li><a href="#">All Kind of Birds</a></li>
-								<li><a href="#">Seller of the day</a></li>
-								<li><a href="#">Breeds of Cats</a></li>
+								@foreach($categorias as $categoria)
+									<li><a href="../../../../blog/categoria/{{$categoria->url}}"> {{$categoria->nombre}}</a></li>
+
+								@endforeach
 							</ul>
 						</aside><!-- Widget Categories /- -->
 						<!-- Widget Recent Post -->
@@ -191,7 +189,7 @@
 							@foreach($postes as $posts)
 								<div class="recent-post-box">
 									<div class="recent-img">
-										<a href="../../../blog/{{$posts->url}}"><img src="../../../uploads/{{$posts->imagenprincipal}}" alt="recent-1" style="    max-width: 43%;"></a>
+										<a href="../../../blog/{{$posts->url}}"><img src="../../../uploads/{{$posts->imagenprincipal}}" alt="recent-1" style="height: 70px;width: 82px"></a>
 									</div>
 									<div class="recent-title">
 										<a href="#">{{$posts->titulo}}</a>
@@ -219,10 +217,18 @@
 								<h3>Tags</h3>
 							</div>
 							<div class="tags-content">
-								@foreach($tags as $tages)
-									<a href="#" title="{{$tages->nombre}}">{{$tages->nombre}}</a>
 
-								@endforeach
+
+									@foreach($tags as $tages)
+
+
+											<a href="../../../../blog/tag/{{$tages->url}}" title="{{$tages->nombre}}">{{$tages->nombre}}</a>
+
+
+
+									@endforeach
+
+
 							</div>
 						</aside><!-- Widget Tags /- -->
 					</div><!-- Widget Area /- -->
@@ -371,15 +377,15 @@
                             '    margin-top: 20px;\n' +
                             '    padding-bottom: 20px;\n' +
                             '    width: 100%;\n' +
-                            '    position: relative;">\n' +
+                            '    position: relative;"><a href="../../../../blog/'+suggestion.url +'">\n' +
                             '                            <div class="recent-img">\n' +
-                            '                            <a href="#"><img src="../../../uploads/'+suggestion.imagenprincipal +'" alt="recent-2" style="height: 70px;width: 82px"></a>\n' +
+                            '                            <a href="../../../../blog/'+suggestion.url +'"><img src="../../../uploads/'+suggestion.imagenprincipal +'" alt="recent-2" style="height: 70px;width: 82px"></a>\n' +
                             '                            </div>\n' +
                             '                            <div class="recent-title">\n' +
-                            '                            <a href="#">'+suggestion.titulo +'</a>\n' +
+                            '                            <a href="../../../../blog/'+suggestion.url +'">'+suggestion.titulo +'</a>\n' +
                             '                        <p>'+suggestion.descripcion.substr(0, 100) +'</p>\n' +
                             '                        </div>\n' +
-                            '                        </div>\n';
+                            '                       </a> </div>\n';
 
 
 

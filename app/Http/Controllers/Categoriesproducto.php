@@ -2,31 +2,31 @@
 
 namespace App\Http\Controllers;
 
-use App\Category;
+use App\CategoriaProductos;
 use App\Post;
 use App\Tag;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class Categories extends Controller
+class Categoriesproducto extends Controller
 {
     //
     public function listar(){
-        $categorias=Category::all();
+        $categorias=CategoriaProductos::all();
 
-        return view("controlpanel.categorias" , compact("categorias"));
+        return view("controlpanel.categoriasproducto" , compact("categorias"));
     }
 
     public function addview(){
 
 
 
-        return view("controlpanel.categoriasaddview" );
+        return view("controlpanel.categoriasproductoaddview" );
     }
 
 
     public function add(Request $request){
-        $categoria=new Category();
+        $categoria=new CategoriaProductos();
         $categoria->nombre=$request->categoria;
         $string=$request->categoria;
         $categoria->url=str_replace("-", " ", $string);
@@ -38,17 +38,17 @@ class Categories extends Controller
 
     public function updateview($id){
 
-        $categoria=Category::where('id','=',$id)->first();
+        $categoria=CategoriaProductos::where('id','=',$id)->first();
 
 
 
 
-        return view("controlpanel.categoriasupdateview",compact('categoria') );
+        return view("controlpanel.categoriasproductoupdateview",compact('categoria') );
     }
 
     public function update(Request $request){
 
-        $categoria=Category::where('id','=',$request->id)->first();
+        $categoria=CategoriaProductos::where('id','=',$request->id)->first();
 
         $categoria->nombre=$request->categoria;
 
@@ -60,7 +60,7 @@ class Categories extends Controller
 
     public function categoryindex($url){
 
-        $tag=Category::where('url',$url)->first();
+        $tag=CategoriaProductos::where('url',$url)->first();
         $tagss=Tag::all();
         $post=Post::all()->take(3);
 

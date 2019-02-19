@@ -26,8 +26,19 @@ Route::get('/gracias-a-ti', function () {
 Route::get('/servicios', function () {
     return view('error');
 });
+Route::get('/shop', function () {
+    return view('shop-details');
+});
+
+
+
+
+
+
+
 Route::get('/blog', 'Posts@postsblog');
 Route::get('/blog/tag/{url}', 'Tags@tagindex');
+Route::get('/blog/categoria/{url}', 'Categories@categoryindex');
 
 Route::get('/blog/{titulo}', 'Posts@getpost');
 
@@ -57,12 +68,30 @@ Route::get('blogsearch','SearchController@search');
 
 //termina blog
 
+
+
+//producto
+
+Route::get('/controlpanel/nuevoproducto','Producto@addshow');
+Route::post('/controlpanel/nuevoproducto/add','Producto@add');
+
+//termina producto
+
 //categorias
 Route::get('/controlpanel/blog/categorias', 'Categories@listar')->name('categorias');
 Route::get('/controlpanel/blog/categorias/new', 'Categories@addview');
 Route::post('/controlpanel/blog/categorias/add', 'Categories@add');
 Route::get('/controlpanel/blog/categorias/modificar/{id}', 'Categories@updateview');
 Route::post('/controlpanel/blog/categorias/modificar', 'Categories@update');
+//termina categorias
+//
+///
+//categorias Productos
+Route::get('/controlpanel/producto/categorias', 'Categoriesproducto@listar')->name('categoriasproducto');
+Route::get('/controlpanel/producto/categorias/new', 'Categoriesproducto@addview');
+Route::post('/controlpanel/producto/categorias/add', 'Categoriesproducto@add');
+Route::get('/controlpanel/producto/categorias/modificar/{id}', 'Categoriesproducto@updateview');
+Route::post('/controlpanel/producto/categorias/modificar', 'Categoriesproducto@update');
 //termina categorias
 
 //Tags
