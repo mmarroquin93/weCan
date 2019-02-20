@@ -140,6 +140,24 @@
 
 
 
+    <br>
+        <h3>Precio</h3>
+
+
+        <div class="input-group mb-3">
+
+
+
+
+
+            <div class="input-group-prepend">
+                <span class="input-group-text">S/. </span>
+            </div>
+            <input type="text" class="form-control" name="precio" aria-label="Amount (to the nearest dollar)">
+            <div class="input-group-append">
+                <span class="input-group-text">.00</span>
+            </div>
+        </div>
 
 
     <button type="submit" class="waves-effect waves-green btn blue">Guardar</button>
@@ -151,8 +169,14 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <script>
     $(document).ready(function(){
+
+
+
+
+
 
     var editore = new Quill('#editor', {
         modules: {

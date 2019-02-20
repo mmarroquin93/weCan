@@ -28,7 +28,8 @@ class Producto extends Controller
         $post->nombre= $request->titulo;
         $post->url=str_replace(' ', '-',$request->titulo);
         $post->descripcion=$request->descripcion;
-        $post->descripcionlarga=$request->editorsito ;
+        $post->descripcionlarga=$request->editorsito;
+        $post->precio=$request->precio;
 
         $file=$request->imagen;
         Storage::disk('public')->put($file->getClientOriginalName(), file_get_contents($file));

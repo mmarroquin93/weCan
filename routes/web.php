@@ -52,6 +52,9 @@ Route::get('/tienda','Tienda@listar');
 
 
 
+Route::get('/controlpanel', function () {
+    return view('controlpanel.adminpanel');
+});
 //blog
 
 Route::get('/controlpanel/blog', 'Posts@listar')->name('blog');
@@ -72,7 +75,7 @@ Route::get('blogsearch','SearchController@search');
 
 //producto
 
-Route::get('/controlpanel/nuevoproducto','Producto@addshow');
+Route::get('/controlpanel/nuevoproducto','Producto@addshow')->name('producto');
 Route::post('/controlpanel/nuevoproducto/add','Producto@add');
 
 //termina producto
@@ -87,7 +90,7 @@ Route::post('/controlpanel/blog/categorias/modificar', 'Categories@update');
 //
 ///
 //categorias Productos
-Route::get('/controlpanel/producto/categorias', 'Categoriesproducto@listar')->name('categoriasproducto');
+Route::get('/controlpanel/producto/categorias', 'Categoriesproducto@listar')->name('categoriaproducto');
 Route::get('/controlpanel/producto/categorias/new', 'Categoriesproducto@addview');
 Route::post('/controlpanel/producto/categorias/add', 'Categoriesproducto@add');
 Route::get('/controlpanel/producto/categorias/modificar/{id}', 'Categoriesproducto@updateview');
